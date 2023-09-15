@@ -109,7 +109,7 @@ function HomePage() {
           <div className="flex  overflow-x-hidden">
             <input
               className="md:w-[416px] md:h-[56px] w-[208px] h-[28px] rounded-tl-[20px] rounded-bl-[20px] text-center text-[#7D5DF6]"
-              placeholder="vem@yah00.com"
+              placeholder="johnsmith@gmail.com"
               value={emailValue}
               onChange={handleChange}
             />
