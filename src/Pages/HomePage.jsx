@@ -35,9 +35,9 @@ function HomePage() {
     }
   };
   return (
-    <div className="md:overflow-x-hidden overflow-x-hidden">
+    <div className="md:overflow-x-hidden w-[100%]">
       <div
-        className={`w-screen h-screen fixed ${
+        className={`w-[100%] h-[100%] fixed ${
           dropdown ? "block" : "hidden"
         } bg-black opacity-50 z-[20]`}
         onClick={close}
@@ -69,7 +69,7 @@ function HomePage() {
         <span className="text-[#7D5DF6]"> Stay Updated, for the launch</span>
       </div>
 
-      <div className="bg-[#F2EFFE] md:h-screen w-screen h-[398px] overflow-y-hidden overflow-x-hidden ">
+      <div className="bg-[#F2EFFE] md:h-screen w-[100%] h-[398px] overflow-y-hidden ">
         <div className="flex pt-[20px] mx-[20px] lg:space-x-[30rem] sm:space-x-[9rem] md:space-x-[15rem] overflow-x-hidden">
           <span>
             <img
@@ -106,7 +106,7 @@ function HomePage() {
             The digital bank that will give you{" "}
             <span className="text-[#7D5DF6]">Zero</span> Headache
           </p>
-          <div className="flex">
+          <div className="flex  overflow-x-hidden">
             <input
               className="md:w-[416px] md:h-[56px] w-[208px] h-[28px] rounded-tl-[20px] rounded-bl-[20px] text-center text-[#7D5DF6]"
               placeholder="vem@yah00.com"
@@ -125,10 +125,16 @@ function HomePage() {
               Sign up
             </button>
           </div>
-          <img
-            className="md:w-[300px] md:h-[550px] w-[109px] h-[180.5px]  md:relative absolute md:right-[0px] md:top-[0px] right-[-50px] top-[200px]"
-            src={AppHome}
-          />
+          <div>
+            <img
+              className="md:w-[300px] md:h-[550px] w-[80px] h-[160.5px]
+            relative
+            md:right-[0px] md:top-[0px]
+            bottom-[25px]
+            "
+              src={AppHome}
+            />
+          </div>
         </div>
       </div>
       <div className="w-screen h-[520px] flex flex-col space-y-[50px] ">
