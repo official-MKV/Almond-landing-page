@@ -10,14 +10,15 @@ import { getFirestore} from 'firebase/firestore';
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBlEOcKybp54jvlTmZPPZ_7OBdJzayCYvM",
-  authDomain: "almond-fc6ce.firebaseapp.com",
-  projectId: "almond-fc6ce",
-  storageBucket: "almond-fc6ce.appspot.com",
-  messagingSenderId: "866639366917",
-  appId: "1:866639366917:web:579126d4ddfd0b01a0856c",
-  measurementId: "G-TJ45T3JD4R"
+  apiKey: "AIzaSyB3_EDt0mXgd8TfiUL2O0-KrB9ULs3fuUU",
+  authDomain: "almond-landing-page.firebaseapp.com",
+  projectId: "almond-landing-page",
+  storageBucket: "almond-landing-page.appspot.com",
+  messagingSenderId: "730291464739",
+  appId: "1:730291464739:web:66bb67c42503dc79905f96",
+  measurementId: "G-TLZK2C2QR2"
 };
 
 // Initialize Firebase

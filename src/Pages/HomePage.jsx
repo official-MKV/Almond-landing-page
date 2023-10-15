@@ -32,7 +32,6 @@ function HomePage() {
   };
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      console.log(window.scrollY);
       if (window.scrollY > 180) {
         setBling(true);
       } else {
@@ -63,15 +62,23 @@ function HomePage() {
       <Backdrop dropdown={dropdown} close={closePopUp} />
       <PopUp dropdown={dropdown} close={closePopUp} />
       <Nav handleWhy={handleWhy} />
-      <Hero dropdown={dropdown} close={closePopUp} joinList={joinList} />
-      <div className="flex md:flex-row flex-col w-screen md:gap-[150px]   gap-[50px] justify-center items-center md:my-[100px] my-[50px]">
+      <Hero
+        dropdown={dropdown}
+        close={closePopUp}
+        setdropDown={setdropDown}
+        joinList={joinList}
+      />
+      <div className="flex md:flex-row flex-col w-screen lg:gap-[150px] md:ml-[10px] md:gap-[10px] gap-[50px] justify-center items-center md:my-[100px] my-[50px]">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.6, delay: 1 }}
           className="flex gap-[8px]"
         >
-          <img src={Clock} className="w-[50px]  h-[50px] " />
+          <img
+            src={Clock}
+            className="lg:w-[50px] lg:h-[50px] md:w-[35px] md:h-[35px] w-[40px] h-[40px]"
+          />
           <div className="flex flex-col gap-[8px]">
             <p className="text-[#15F4B1] text-[20px] w-[237px] font-[700]">
               Instant Transactions
@@ -88,7 +95,10 @@ function HomePage() {
           transition={{ duration: 0.6, delay: 1.5 }}
           className="flex gap-[8px] md:flex-row  "
         >
-          <img src={X} className="w-[50px] h-[50px]" />
+          <img
+            src={X}
+            className="lg:w-[50px] lg:h-[50px] md:w-[35px] md:h-[35px] w-[40px] h-[40px]"
+          />
           <div className="flex flex-col gap-[8px]">
             <p className="text-[#15F4B1]  text-[20px] w-[237px] font-[700]">
               Zero Transfer Fees
@@ -104,7 +114,10 @@ function HomePage() {
           transition={{ duration: 0.6, delay: 2 }}
           className="flex gap-[8px]"
         >
-          <img src={Wallet} className="w-[50px] h-[50px]" />
+          <img
+            src={Wallet}
+            className="lg:w-[50px] lg:h-[50px] md:w-[35px] md:h-[35px] w-[40px] h-[40px]"
+          />
           <div className="flex flex-col gap-[8px]">
             <p className="text-[#15F4B1] text-[20px] w-[237px] font-[700]">
               Direct Wallet Linking
@@ -120,9 +133,9 @@ function HomePage() {
         className="w-screen h-full overflow-y-hidden flex flex-col gap-[20px] items-center "
         ref={whyAlmond}
       >
-        <div className="md:w-[1200px] md:h-[425px] w-[344px] h-[212.5px] rounded-[30px] bg-[#7D5DF6] shadow-2xl">
-          <div className="md:ml-[46px] ml-[27px] md:w-[600px] md:mt-[46px] mt-[10px] md:h-[320px]  flex flex-col justify-center">
-            <p className="md:text-[50px] text-[25px] font-[600] md:w-[659px] w-[300px] text-[#FFF]">
+        <div className="lg:w-[1200px] lg:h-[425px] md:w-[800px] md:h-[300px]  w-[344px] h-[212.5px] rounded-[30px] bg-[#7D5DF6] shadow-2xl">
+          <div className="lg:ml-[46px] ml-[27px] lg:w-[600px] md:w-[250px] lg:mt-[46px] mt-[10px] md:h-[320px]  flex flex-col justify-center">
+            <p className="lg:text-[50px] md:text-[30px] text-[25px] font-[600] lg:w-[659px] md:w-[350px] w-[300px] text-[#FFF]">
               Access the Safest Investment Class with Almond
             </p>
             <p className="md:text-[15px] text-[7.5px] font-[300] text-[#FFF] md:w-[453px] w-[226.5px]">
@@ -132,17 +145,17 @@ function HomePage() {
             </p>
             <img
               src={Prop}
-              className="absolute md:right-[180px] md:h-[60%] h-[20%] md:top-[1050px] top-[95%] z-0"
+              className="absolute lg:right-[180px] lg:h-[60%] md:h-[25%] h-[20%] lg:top-[1050px] md:right-[0px] top-[95%] z-0"
             />
           </div>
         </div>
-        <div className="flex md:flex-row flex-col justify-center items-center gap-[20px]">
-          <div className="bg-[#ECE7FE] md:w-[590px] md:h-[475px]  w-[344px] h-[212.5px] rounded-[30px] flex flex-col  gap-[8px]">
+        <div className="flex lg:flex-row  md:flex-col flex-col justify-center items-center gap-[20px]">
+          <div className="bg-[#ECE7FE] lg:w-[590px] lg:h-[475px] md:w-[800px]  md:h-[350px] w-[344px] h-[212.5px] rounded-[30px] flex flex-col  gap-[8px]">
             <div className="flex flex-col justify-center gap-[8px]  md:ml-[46px] ml-[27px] md:mt-[46px] mt-[10px]">
-              <p className="md:text-[45px] text-[22.5px] text-[#515151] font-[600] md:w-[526px] w-[306.685px]">
+              <p className="lg:text-[45px] md:text-[30px] text-[22.5px] text-[#515151] font-[600] lg:w-[526px] md:w-[600px] w-[306.685px]">
                 Unlock Financial Freedom with Almond Credit Cards
               </p>
-              <p className="text-[#8A8A8A] md:text-[15px] text-[7.5px] font-[300] md:w-[384px] w-[223.892px]">
+              <p className="text-[#8A8A8A] md:text-[15px] text-[7.5px] font-[300] lg:w-[384px] md:w-[500px] w-[223.892px]">
                 Experience financial freedom like never before with Almond
                 Credit Cards, now offering an impressive{" "}
                 <span className="text-[#7D5DF6] font-[700] text-[20px] transform rotate-x-12 hover:rotate-x-0 transition-transform duration-300">
@@ -157,13 +170,13 @@ function HomePage() {
             <div className="flex justify-center">
               <img
                 src={CreditCard}
-                className=" visible md:block hidden absolute md:w-[431px] md:h-[236px] w-[251.295px] h-[135px]"
+                className=" visible md:hidden lg:block hidden absolute md:w-[431px] md:h-[236px] w-[251.295px] h-[135px]"
               />
             </div>
           </div>
-          <div className="bg-[#2C2156] md:w-[590px] md:h-[475px]  w-[344px] h-[212.5px] rounded-[30px] shadow-2xl">
+          <div className="bg-[#2C2156] lg:w-[590px] md:w-[800px] lg:h-[475px] md:h-[250px]  w-[344px] h-[212.5px] rounded-[30px] shadow-2xl">
             <div className="flex flex-col justify-center gap-[10px] md:ml-[46px] ml-[27px] md:mt-[46px] mt-[24px]">
-              <p className="md:text-[45px] text-[22.5px] text-[#FFF] font-[600] w-[478pxpx]">
+              <p className="lg:text-[45px] md:text-[30px] text-[22.5px] text-[#FFF] font-[600] w-[478pxpx]">
                 Instant Transactions
               </p>
               <p className="text-[#FDFDFD] md:text-[15px] text-[7.5px] font-[300] md:w-[384px] w-[223.892px]">
@@ -179,7 +192,7 @@ function HomePage() {
 
         {/* Footer */}
         <div className="w-screen md:h-[400px] h-[223px] mt-[92px] bg-[#ECE7FE] rounded-tl-[80px] rounded-tr-[80px]">
-          <div className="w-screen h-full flex justify-center items-center md:gap-[100px] gap-[20px]">
+          <div className="w-screen h-full flex justify-center items-center lg:gap-[100px] md:gap-[10px] gap-[20px]">
             <div className="flex flex-col gap-[20px] ">
               <p className="md:text-[20px] text-[10px] text-[#814646]  font-[500]">
                 Company

@@ -6,7 +6,7 @@ const Backdrop = ({ dropdown, close }) => {
       <div
         className={`w-[100%] h-[100%] fixed ${
           dropdown ? "block" : "hidden"
-        } bg-black opacity-50 z-[20]`}
+        } bg-black opacity-50 z-[50]`}
         onClick={close}
       ></div>
     </div>

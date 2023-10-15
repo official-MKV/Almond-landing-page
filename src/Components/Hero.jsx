@@ -6,7 +6,7 @@ import loadingimg from "../assets/loading.png";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase_init.js";
 import { useEffect } from "react";
-const Hero = ({ joinList }) => {
+const Hero = ({ joinList, setdropDown }) => {
   const [emailValue, setEmailValue] = useState("");
 
   const [error, setError] = useState(false);
@@ -21,6 +21,8 @@ const Hero = ({ joinList }) => {
   };
   const handleChange = (e) => {
     if (e.target.value.length > 0) {
+      setError(false);
+    } else {
       setError(true);
     }
     validateEmail(e.target.value);
@@ -28,21 +30,24 @@ const Hero = ({ joinList }) => {
   };
 
   const handleClick = async () => {
-    setLoading(true);
     try {
+      setLoading(true);
+      console.log(emailValue);
       const docRef = await addDoc(collection(db, "WaitList"), {
         email: emailValue,
       });
       setdropDown(true);
       setEmailValue("");
+      setLoading(false);
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);
+      setLoading(false);
     }
   };
   return (
     <div
-      className="bg-[#F2EFFE] md:h-screen w-[100%] h-screen overflow-y-hidden overflow-x-hidden"
+      className="bg-[#F2EFFE] lg:h-screen md:h-[800px] w-[100%] h-screen overflow-y-hidden overflow-x-hidden"
       ref={joinList}
     >
       <div className="  md:ml-[180px]  md:mt-[180px]  mt-[90px] w-full   flex flex-col gap-[10px] text-center justify-center ">
@@ -57,7 +62,7 @@ const Hero = ({ joinList }) => {
             staggerChildren: 0.15,
             delayChildren0: 0.04,
           }}
-          className="  md:w-[500px] md:text-[50px] text-[50px] w-[371px]  md:text-left  text-center font-[700] md:text-[#515151] text-black z-10"
+          className="  md:w-[500px] md:text-[50px] text-[45px] w-[371px]  md:text-left  text-center font-[700] md:text-[#515151] text-black z-10"
         >
           What is <span className="text-[#7D5DF6]">Almond ?</span>
         </motion.p>
@@ -95,7 +100,7 @@ const Hero = ({ joinList }) => {
             md:w-[416px] md:h-[56px] md:text-[15px]
              text-[10px] w-[208px] h-[28px] rounded-tl-[20px]
              rounded-bl-[20px] text-center
-              text-[#7D5DF6] style-none"
+              text-[#7D5DF6] style-none z-0"
             placeholder="johnsmith@gmail.com"
             value={emailValue}
             onChange={handleChange}
@@ -112,7 +117,7 @@ const Hero = ({ joinList }) => {
          cursor-pointer rounded-tr-[20px] rounded-br-[20px]
           text-[#515151] font-[700] `}
             onClick={handleClick}
-            disabled={!error}
+            // disabled={!error}
           >
             {loading ? (
               <img
@@ -124,19 +129,17 @@ const Hero = ({ joinList }) => {
             )}
           </button>
         </div>
-        <div className="md:block hidden w-[450px] h-[600px] rounded-[50%] bg-[#7D5DF6] absolute right-[60px] top-[120px]"></div>
+        <div className="lg:block md:hidden hidden w-[35rem] h-[35rem] rounded-[50%] bg-[#7D5DF6] absolute right-[60px] top-[120px] z-0"></div>
 
         <motion.img
           animate={{ y: [0, -10, -20, -20, -10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="
+          className=" lg:w-[280px] lg:h-[480px] md:w-[130px] md:h-[230px] md:block hidden lg:absolute
+          lg:right-[13%] lg:top-[26%]
+          md:absolute
+          md:top-[55%] md:right-[380px]
 
-          md:w-[280px] md:h-[480px] w-[120px] h-[160.5px]
-          absolute
-        invisible
-        md:visible
-
-        right-[10%] top-[30%]
+            visible
 
         "
           src={AppHome}
