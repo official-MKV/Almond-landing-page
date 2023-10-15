@@ -68,7 +68,7 @@ function HomePage() {
         setdropDown={setdropDown}
         joinList={joinList}
       />
-      <div className="flex md:flex-row flex-col w-screen lg:gap-[150px] md:ml-[10px] md:gap-[10px] gap-[50px] justify-center items-center md:my-[100px] my-[50px]">
+      <div className="flex md:flex-row flex-col w-screen lg:gap-[150px] md:ml-[10px] md:gap-[10px] gap-[50px] justify-center items-center md:my-[100px] my-[50px] ">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
@@ -80,7 +80,7 @@ function HomePage() {
             className="lg:w-[50px] lg:h-[50px] md:w-[35px] md:h-[35px] w-[40px] h-[40px]"
           />
           <div className="flex flex-col gap-[8px]">
-            <p className="text-[#15F4B1] text-[20px] w-[237px] font-[700]">
+            <p className="text-[#15F4B1] text-[20px] md:text-[17px] w-[237px] font-[700]">
               Instant Transactions
             </p>
             <p className="text-[#ADADAD] text-[12px] font-[400] w-[135px] text-left">
@@ -100,7 +100,7 @@ function HomePage() {
             className="lg:w-[50px] lg:h-[50px] md:w-[35px] md:h-[35px] w-[40px] h-[40px]"
           />
           <div className="flex flex-col gap-[8px]">
-            <p className="text-[#15F4B1]  text-[20px] w-[237px] font-[700]">
+            <p className="text-[#15F4B1]   md:text-[17px]  text-[20px] w-[237px] font-[700]">
               Zero Transfer Fees
             </p>
             <p className="text-[#ADADAD] text-[12px] font-[400] w-[135px] text-left">
@@ -119,7 +119,7 @@ function HomePage() {
             className="lg:w-[50px] lg:h-[50px] md:w-[35px] md:h-[35px] w-[40px] h-[40px]"
           />
           <div className="flex flex-col gap-[8px]">
-            <p className="text-[#15F4B1] text-[20px] w-[237px] font-[700]">
+            <p className="text-[#15F4B1] text-[20px] w-[237px]  md:text-[17px]  font-[700]">
               Direct Wallet Linking
             </p>
             <p className="text-[#ADADAD] text-[12px] font-[400] w-[135px] text-left">
@@ -133,24 +133,27 @@ function HomePage() {
         className="w-screen h-full overflow-y-hidden flex flex-col gap-[20px] items-center "
         ref={whyAlmond}
       >
-        <div className="lg:w-[1200px] lg:h-[425px] md:w-[800px] md:h-[300px]  w-[344px] h-[212.5px] rounded-[30px] bg-[#7D5DF6] shadow-2xl">
-          <div className="lg:ml-[46px] ml-[27px] lg:w-[600px] md:w-[250px] lg:mt-[46px] mt-[10px] md:h-[320px]  flex flex-col justify-center">
-            <p className="lg:text-[50px] md:text-[30px] text-[25px] font-[600] lg:w-[659px] md:w-[350px] w-[300px] text-[#FFF]">
-              Access the Safest Investment Class with Almond
-            </p>
-            <p className="md:text-[15px] text-[7.5px] font-[300] text-[#FFF] md:w-[453px] w-[226.5px]">
-              Explore the world of commodities and experience financial security
-              like never before. With Almond Commodity Market, your investments
-              are backed by the safest asset class. Invest with peace of mind.
-            </p>
+        <div className="lg:w-[1200px] lg:h-[425px] md:w-[750px] md:h-[300px]  w-[344px] h-[212.5px] rounded-[30px] bg-[#7D5DF6] shadow-2xl">
+          <div className="flex flex-row">
+            <div className="lg:ml-[46px] ml-[27px] lg:w-[600px] md:w-[250px] lg:mt-[46px] mt-[10px] md:h-[320px]  flex flex-col justify-center">
+              <p className="lg:text-[50px] md:text-[30px] text-[25px] font-[600] lg:w-[659px] md:w-[350px] w-[300px] text-[#FFF]">
+                Access the Safest Investment Class with Almond
+              </p>
+              <p className="md:text-[15px] text-[7.5px] font-[300] text-[#FFF] md:w-[453px] w-[226.5px]">
+                Explore the world of commodities and experience financial
+                security like never before. With Almond Commodity Market, your
+                investments are backed by the safest asset class. Invest with
+                peace of mind.
+              </p>
+            </div>
             <img
               src={Prop}
-              className="absolute lg:right-[180px] lg:h-[60%] md:h-[25%] h-[20%] lg:top-[1050px] md:right-[0px] top-[95%] z-0"
+              className="lg:right-[180px] lg:h-[500px] lg:relative absolute md:h-[300px]  md:block md:relative hidden lg:bottom-[75px] md:right-[10px] md:bottom-[20px] top-[95%] z-0"
             />
           </div>
         </div>
         <div className="flex lg:flex-row  md:flex-col flex-col justify-center items-center gap-[20px]">
-          <div className="bg-[#ECE7FE] lg:w-[590px] lg:h-[475px] md:w-[800px]  md:h-[350px] w-[344px] h-[212.5px] rounded-[30px] flex flex-col  gap-[8px]">
+          <div className="bg-[#ECE7FE] lg:w-[590px] lg:h-[475px] md:w-[750px]  md:h-[350px] w-[344px] h-[212.5px] rounded-[30px] flex flex-col  gap-[8px]">
             <div className="flex flex-col justify-center gap-[8px]  md:ml-[46px] ml-[27px] md:mt-[46px] mt-[10px]">
               <p className="lg:text-[45px] md:text-[30px] text-[22.5px] text-[#515151] font-[600] lg:w-[526px] md:w-[600px] w-[306.685px]">
                 Unlock Financial Freedom with Almond Credit Cards
@@ -174,7 +177,7 @@ function HomePage() {
               />
             </div>
           </div>
-          <div className="bg-[#2C2156] lg:w-[590px] md:w-[800px] lg:h-[475px] md:h-[250px]  w-[344px] h-[212.5px] rounded-[30px] shadow-2xl">
+          <div className="bg-[#2C2156] lg:w-[590px] md:w-[750px] lg:h-[475px] md:h-[250px]  w-[344px] h-[212.5px] rounded-[30px] shadow-2xl">
             <div className="flex flex-col justify-center gap-[10px] md:ml-[46px] ml-[27px] md:mt-[46px] mt-[24px]">
               <p className="lg:text-[45px] md:text-[30px] text-[22.5px] text-[#FFF] font-[600] w-[478pxpx]">
                 Instant Transactions
@@ -192,39 +195,50 @@ function HomePage() {
 
         {/* Footer */}
         <div className="w-screen md:h-[400px] h-[223px] mt-[92px] bg-[#ECE7FE] rounded-tl-[80px] rounded-tr-[80px]">
-          <div className="w-screen h-full flex justify-center items-center lg:gap-[100px] md:gap-[10px] gap-[20px]">
+          <div className="w-screen h-full flex justify-center items-center lg:gap-[100px] md:gap-[5px] gap-[20px]">
             <div className="flex flex-col gap-[20px] ">
-              <p className="md:text-[20px] text-[10px] text-[#814646]  font-[500]">
+              <p className="md:text-[20px] text-[10px] text-[#515151]  font-[500]">
                 Company
               </p>
-              <ul className="md:text-[15px] text-[7.5px] text-[rgb(138,138,138)] font-[300] flex flex-col gap-[2px]">
-                <li className="cursor-pointer   hover:underline hover:text-[#7D5DF6]  ">
+              <span className="md:text-[15px] text-[7.5px] text-[rgb(138,138,138)] font-[300] flex flex-col gap-[2px]">
+                <a
+                  href="/#"
+                  className="cursor-pointer   hover:underline hover:text-[#7D5DF6]  "
+                >
                   About us
-                </li>
-                <li className="cursor-pointer   hover:underline hover:text-[#7D5DF6]  ">
+                </a>
+                <a
+                  href="/#"
+                  className="cursor-pointer   hover:underline hover:text-[#7D5DF6]  "
+                >
                   Blog
-                </li>
-                <li className="cursor-pointer   hover:underline hover:text-[#7D5DF6]  ">
+                </a>
+                <a
+                  href="/#"
+                  className="cursor-pointer   hover:underline hover:text-[#7D5DF6]  "
+                >
                   FAQ
-                </li>
-                <li className="cursor-pointer   hover:underline hover:text-[#7D5DF6]  ">
+                </a>
+                <a className="cursor-pointer   hover:underline hover:text-[#7D5DF6]  ">
                   Privacy Policy
-                </li>
-              </ul>
+                </a>
+              </span>
             </div>
             <div className="flex flex-col gap-[20px] relative md:bottom-[32px] bottom-[20px] ">
               <p className="md:text-[20px] text-[10px] text-[#515151]  font-[500]">
                 Need Help
               </p>
-              <ul className="md:text-[15px] text-[7.5px] text-[#8A8A8A] font-[300] flex flex-col gap-[2px]">
-                <li>support@almondnigeria.com</li>
-              </ul>
+              <span className="lg:text-[15px] md:text-[7px] text-[7.5px] text-[#8A8A8A] font-[300] flex flex-col gap-[2px]">
+                <a className="hover:underline hover:text-[#7D5DF6] cursor-pointer">
+                  support@almondnigeria.com
+                </a>
+              </span>
             </div>
-            <div className="flex flex-col gap-[20px]  relative md:bottom-[32px]  bottom-[-px]">
+            <div className="flex flex-col md:gap-[5px] gap-[20px]  relative lg:bottom-[32px] md:bottom-[20px]  bottom-[-px]">
               <p className="md:text-[20px] text-[10px] text-[#515151]  font-[500]">
                 Location
               </p>
-              <ul className=" md:text-[15px] md:w-[300px] w-[80px] text-[9px] lowercase text-[#8A8A8A] font-[300] flex flex-col gap-[2px]">
+              <ul className=" md:text-[15px] lg:w-[300px] md:w-[200px] w-[80px] text-[9px] lowercase text-[#8A8A8A] font-[300] flex flex-col gap-[2px]">
                 <li>
                   16, IKOT MBO LAYOUT, MURTALA MOHAMMED HIGHWAY, CALABAR, CROSS
                   RIVER STATE, NIGERIA
@@ -235,18 +249,18 @@ function HomePage() {
               <p className="md:text-[20px] text-[10px] text-[#515151]  font-[500]">
                 Socials
               </p>
-              <div className="flex gap-[27px] md:gap-[54px] text-blue-500">
+              <div className="flex gap-[10px] md:gap-[30px] lg:gap-[54px] text-blue-500">
                 <img
                   src={Social1}
-                  className="w-[10px] md:w-[30px]   cursor-pointer hover:text-[#7D5DF6]"
+                  className="w-[10px] lg:w-[30px] md:w-[20px]  cursor-pointer hover:text-[#7D5DF6]"
                 />
                 <img
                   src={Social2}
-                  className="w-[10px] md:w-[30px] cursor-pointer"
+                  className="w-[10px] lg:w-[30px] md:w-[20px]  cursor-pointer"
                 />
                 <img
                   src={Social3}
-                  className="w-[10px] md:w-[30px] cursor-pointer"
+                  className="w-[10px] lg:w-[30px] md:w-[20px]  cursor-pointer "
                 />
               </div>
             </div>

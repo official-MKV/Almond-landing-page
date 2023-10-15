@@ -50,7 +50,7 @@ const Hero = ({ joinList, setdropDown }) => {
       className="bg-[#F2EFFE] lg:h-screen md:h-[800px] w-[100%] h-screen overflow-y-hidden overflow-x-hidden"
       ref={joinList}
     >
-      <div className="  md:ml-[180px]  md:mt-[180px]  mt-[90px] w-full   flex flex-col gap-[10px] text-center justify-center ">
+      <div className="md:mt-[180px]  mt-[90px] w-full   flex flex-col gap-[10px] text-center justify-center items-center ">
         <motion.p
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: -50 }}
@@ -66,7 +66,7 @@ const Hero = ({ joinList, setdropDown }) => {
         >
           What is <span className="text-[#7D5DF6]">Almond ?</span>
         </motion.p>
-        <motion.p className="md:ml-[0px] ml-[50px] md:w-[500px] w-[250px] justify-center md:text-left text-center text-[#515151] md:text-[15px] text-[10px]">
+        <motion.p className="md:w-[500px] w-[250px] justify-center md:text-left text-center text-[#515151] md:text-[15px] text-[10px]">
           Almond is a cutting-edge digital banking app that combines the
           <span className="text-[#7D5DF6] font-[500] text-[21px]">
             {" "}
@@ -87,12 +87,13 @@ const Hero = ({ joinList, setdropDown }) => {
             zero transfer fees
           </span>{" "}
           , personalized ATM cards, direct wallet linking, instant transactions,
-          and access to investment opportunities through NGX and ACX{" "}
+          and access to investment opportunities through NGX and{" "}
           <span className="text-[#7D5DF6] font-[500] text-[21px]">
-            Alomond Commodity exchange
-          </span>
-          . With exceptional customer service, Almond is the future of banking,
-          offering reliability, speed, and security in the palm of your hand.
+            Almond Commodity exchange
+          </span>{" "}
+          (ACX) . With exceptional customer service, Almond is the future of
+          banking, offering reliability, speed, and security in the palm of your
+          hand.
         </motion.p>
         <div className="flex  overflow-x-hidden z-20 mt-[20px]  ml-[50px] md:ml-[0px]  ">
           <input
@@ -137,9 +138,8 @@ const Hero = ({ joinList, setdropDown }) => {
           className=" lg:w-[280px] lg:h-[480px] md:w-[130px] md:h-[230px] md:block hidden lg:absolute
           lg:right-[13%] lg:top-[26%]
           md:absolute
-          md:top-[55%] md:right-[380px]
-
-            visible
+          md:top-[70%] md:right-[320px]
+          visible
 
         "
           src={AppHome}

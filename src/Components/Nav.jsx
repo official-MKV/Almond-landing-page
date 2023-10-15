@@ -46,7 +46,7 @@ const Nav = ({ handleWhy }) => {
         className="absolute w-[100px] md:w-[150px] md:top-[-20px] top-[10px] md:left-[120px] left-[10px]"
         src={Logo}
       />
-      <span className="text-[#676767] md:ml-auto md:flex justify-center  items-center hidden md:gap-[40px] gap-[20px] md:text-[15px] text-[8px] font-[600]">
+      <span className="text-[#676767]  md:flex justify-center  items-center hidden lg:gap-[40px] md:gap-[20px]  md:ml-[50%] gap-[20px] md:text-[15px] text-[8px] font-[600]">
         <a className="transition duration-1000 ease-in-out hover:text-[#7D5DF6] cursor-pointer hover:text-[300] hover:underline">
           Home
         </a>
